@@ -1,0 +1,38 @@
+_format_version: "3.0"
+services:
+  - name: user-service
+    url: https://user-service-mh3m.onrender.com
+    routes:
+      - name: user-route
+        paths:
+          - /user-service
+  - name: product-service
+    url: https://user-service-mh3m.onrender.com
+    routes:
+      - name: product-route
+        paths:
+          - /product-service
+  - name: order-service
+    url: https://user-service-mh3m.onrender.com
+    routes:
+      - name: order-route
+        paths:
+          - /order-service
+  - name: payment-service
+    url: https://user-service-mh3m.onrender.com
+    routes:
+      - name: payment-route
+        paths:
+          - /payment-service
+  - name: cart-service
+    url: https://user-service-mh3m.onrender.com
+    routes:
+      - name: cart-route
+        paths:
+          - /cart-service
+  - name: notification-service
+    url: https://user-service-mh3m.onrender.com
+    routes:
+      - name: notification-route
+        paths:
+          - /notification-service
