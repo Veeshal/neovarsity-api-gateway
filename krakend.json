@@ -4,9 +4,6 @@
   "port": 8080,
   "endpoints": [
 
-    /* ===============================
-       USER-SERVICE ENDPOINTS
-       =============================== */
 
     {
       "endpoint": "/user-service/{rest:.+}",
@@ -79,10 +76,6 @@
       ]
     },
 
-    /* ===============================
-       PRODUCT-SERVICE ENDPOINTS
-       (currently pointing to user-service)
-       =============================== */
 
     {
       "endpoint": "/product-service/{rest:.+}",
