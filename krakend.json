@@ -3,147 +3,35 @@
   "name": "api-gateway",
   "port": 8080,
   "endpoints": [
-
-
     {
       "endpoint": "/user-service/{rest:.+}",
       "method": "GET",
       "backend": [
         {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
+          "host": [
+            "https://user-service-mh3m.onrender.com"
+          ],
+          "extra_config": {
+            "proxy": {
+              "rewrite": "/{rest}"
+            }
+          }
         }
       ]
     },
-    {
-      "endpoint": "/user-service/{rest:.+}",
-      "method": "POST",
-      "backend": [
-        {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
-        }
-      ]
-    },
-    {
-      "endpoint": "/user-service/{rest:.+}",
-      "method": "PUT",
-      "backend": [
-        {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
-        }
-      ]
-    },
-    {
-      "endpoint": "/user-service/{rest:.+}",
-      "method": "PATCH",
-      "backend": [
-        {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
-        }
-      ]
-    },
-    {
-      "endpoint": "/user-service/{rest:.+}",
-      "method": "DELETE",
-      "backend": [
-        {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
-        }
-      ]
-    },
-    {
-      "endpoint": "/user-service/{rest:.+}",
-      "method": "OPTIONS",
-      "backend": [
-        {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
-        }
-      ]
-    },
-    {
-      "endpoint": "/user-service/{rest:.+}",
-      "method": "HEAD",
-      "backend": [
-        {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
-        }
-      ]
-    },
-
-
     {
       "endpoint": "/product-service/{rest:.+}",
       "method": "GET",
       "backend": [
         {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
-        }
-      ]
-    },
-    {
-      "endpoint": "/product-service/{rest:.+}",
-      "method": "POST",
-      "backend": [
-        {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
-        }
-      ]
-    },
-    {
-      "endpoint": "/product-service/{rest:.+}",
-      "method": "PUT",
-      "backend": [
-        {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
-        }
-      ]
-    },
-    {
-      "endpoint": "/product-service/{rest:.+}",
-      "method": "PATCH",
-      "backend": [
-        {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
-        }
-      ]
-    },
-    {
-      "endpoint": "/product-service/{rest:.+}",
-      "method": "DELETE",
-      "backend": [
-        {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
-        }
-      ]
-    },
-    {
-      "endpoint": "/product-service/{rest:.+}",
-      "method": "OPTIONS",
-      "backend": [
-        {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
-        }
-      ]
-    },
-    {
-      "endpoint": "/product-service/{rest:.+}",
-      "method": "HEAD",
-      "backend": [
-        {
-          "url_pattern": "/{rest}",
-          "host": ["https://user-service-mh3m.onrender.com"]
+          "host": [
+            "https://user-service-mh3m.onrender.com"
+          ],
+          "extra_config": {
+            "proxy": {
+              "rewrite": "/{rest}"
+            }
+          }
         }
       ]
     }
