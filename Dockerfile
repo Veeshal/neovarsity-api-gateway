@@ -1,7 +1,11 @@
-FROM nginx:alpine
+# Use official KrakenD CE image
+FROM devopsfaith/krakend:2.6
 
-COPY nginx.conf /etc/nginx/nginx.conf
+# Copy your KrakenD configuration file into the container
+COPY krakend.json /etc/krakend/krakend.json
 
-EXPOSE 10000
+# Expose KrakenD port (Render reads this)
+EXPOSE 8080
 
-CMD ["nginx", "-g", "daemon off;"]
+# Run KrakenD with your config
+CMD ["run", "-c", "/etc/krakend/krakend.json"]
